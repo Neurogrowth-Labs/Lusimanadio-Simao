@@ -13,6 +13,7 @@ import Endorsements from './components/Endorsements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import DigitalCardModal from './components/DigitalCardModal';
+import ExecutiveChat from './components/ExecutiveChat';
 
 export default function App() {
   const [isQrOpen, setIsQrOpen] = useState(false);
@@ -60,6 +61,9 @@ export default function App() {
 
       {/* Digital Business Card Modal */}
       <DigitalCardModal isOpen={isQrOpen} onClose={() => setIsQrOpen(false)} />
+
+      {/* Floating Chat Advisor Button and Chatbox */}
+      <ExecutiveChat />
     </div>
   );
 }
