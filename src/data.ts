@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
   title: 'Founder & CEO | Strategic Growth & AI Leader | Sustainability & Trade Advocate',
   bioBrief: 'A visionary African executive, entrepreneur, and strategist with extensive leadership experience across artificial intelligence, sustainable development, international trade, investment promotion, media, and governance.',
   bioFull: 'Mr. Lusimadio Soki Simao is widely recognized for founding and scaling impact-driven institutions that align innovation, policy, and inclusive economic growth across Africa. As an executive at the intersection of tech, environmental policy, and trade, his career is defined by strategic leadership, AI-driven innovation, and continental trade development to shape future-ready African institutions and globally competitive enterprises.',
-  portraitPath: '/src/assets/images/lusimadio_portrait_1782257075664.jpg',
+  portraitPath: 'https://media.licdn.com/dms/image/v2/D4D03AQF97hhNCtJS0Q/profile-displayphoto-crop_800_800/B4DZoo4HDmKUAI-/0/1761622390771?e=1784160000&v=beta&t=ne2sUlqerAbBrARFVcXjws8263wGRCLIqh6Rl7wbtZo',
   contacts: [
     { label: 'Primary Email', value: 'simao@thevoiceofwellness.co.za' },
     { label: 'NeuroGrowth Labs', value: 'Simao@neurogrowthlabs.co.za' },

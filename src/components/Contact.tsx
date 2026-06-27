@@ -36,7 +36,6 @@ export default function Contact() {
 
     setIsSubmitting(true);
 
-    // Simulate secure transmission
     setTimeout(() => {
       const newMessage: ContactMessage = {
         id: Math.random().toString(36).substr(2, 9),
@@ -44,16 +43,33 @@ export default function Contact() {
         timestamp: new Date().toISOString(),
       };
 
-      // Save to localStorage for durable client-side demonstration
+      // Save to localStorage for durable client-side record
       const existing = JSON.parse(localStorage.getItem('executive_inquiries') || '[]');
       existing.push(newMessage);
       localStorage.setItem('executive_inquiries', JSON.stringify(existing));
+
+      // Construct direct mailto connection
+      const mailtoEmail = 'simao@neurogrowthlabs.co.za';
+      const mailtoSubject = encodeURIComponent(`Advisory Inquiry: ${formData.organization || 'Partnership'} - ${formData.name}`);
+      const mailtoBody = encodeURIComponent(
+        `Dear Mr. Simao,\n\n` +
+        `I am writing to initiate an advisory/partnership inquiry.\n\n` +
+        `Executive Name: ${formData.name}\n` +
+        `Representative Email: ${formData.email}\n` +
+        `Organization/Ministry: ${formData.organization || 'N/A'}\n\n` +
+        `Inquiry Specification:\n${formData.message}\n\n` +
+        `Best regards,\n` +
+        `${formData.name}`
+      );
+
+      // Open email client
+      window.location.href = `mailto:${mailtoEmail}?subject=${mailtoSubject}&body=${mailtoBody}`;
 
       setIsSubmitting(false);
       setIsSuccess(true);
       setFormData({ name: '', email: '', organization: '', message: '' });
       setErrors({});
-    }, 1200);
+    }, 1000);
   };
 
   return (
@@ -259,7 +275,7 @@ export default function Contact() {
                     </div>
 
                     <p className="font-sans text-neutral-300 text-xs leading-relaxed max-w-sm">
-                      Your business proposal has been securely logged on the local client environment cache. The Executive Secretary office has queued your request and will follow up shortly.
+                      Your inquiry has been compiled and securely handed over to your email application. Please tap send to deliver it directly to <strong>simao@neurogrowthlabs.co.za</strong>.
                     </p>
 
                     <button
