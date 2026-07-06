@@ -7,7 +7,11 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Services from './components/Services';
 import Gallery from './components/Gallery';
+import Certifications from './components/Certifications';
+import Nominations from './components/Nominations';
+import Speaking from './components/Speaking';
 import Publications from './components/Publications';
 import Endorsements from './components/Endorsements';
 import Contact from './components/Contact';
@@ -50,7 +54,11 @@ export default function App() {
       <main className="relative">
         <Hero onOpenQr={() => setIsQrOpen(true)} />
         <About />
+        <Services />
         <Gallery />
+        <Certifications />
+        <Nominations />
+        <Speaking />
         <Publications />
         <Endorsements />
         <Contact />

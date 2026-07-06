@@ -138,7 +138,7 @@ export default function Contact() {
                     Regional Headquarters
                   </span>
                   <span className="font-sans text-xs text-neutral-300">
-                    Johannesburg, South Africa / Kinshasa, DRC
+                    Cape Town, South Africa / Luanda, Angola
                   </span>
                 </div>
               </div>

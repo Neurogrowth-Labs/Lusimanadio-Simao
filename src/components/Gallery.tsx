@@ -143,9 +143,22 @@ export default function Gallery() {
                   <span className="font-mono text-[9px] tracking-wider text-neutral-500 uppercase">
                     {proj.category}
                   </span>
-                  <span className="text-[10px] font-mono text-neutral-600 border border-neutral-800 px-2 py-0.5 uppercase tracking-widest bg-neutral-950/80">
-                    Active Suite
-                  </span>
+                  {proj.link ? (
+                    <a
+                      href={proj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-[10px] font-mono text-white border border-white hover:bg-white hover:text-black px-2.5 py-0.5 uppercase tracking-widest bg-neutral-950/80 transition-all duration-300 flex items-center space-x-1"
+                    >
+                      <span>Visit Platform</span>
+                      <ArrowRight size={8} className="transform -rotate-45" />
+                    </a>
+                  ) : (
+                    <span className="text-[10px] font-mono text-neutral-600 border border-neutral-800 px-2 py-0.5 uppercase tracking-widest bg-neutral-950/80">
+                      Active Suite
+                    </span>
+                  )}
                 </div>
 
                 {/* Typography Block */}
@@ -282,12 +295,27 @@ export default function Gallery() {
                 </div>
 
                 {/* Footer Controls */}
-                <div className="pt-6 border-t border-neutral-900 flex justify-end">
+                <div className="pt-6 border-t border-neutral-900 flex flex-col sm:flex-row justify-end gap-3">
+                  {selectedProject.link && (
+                    <a
+                      href={selectedProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2.5 bg-white text-black font-mono text-[11px] tracking-wider uppercase hover:bg-neutral-900 hover:text-white transition-all duration-300 border border-white text-center flex items-center justify-center space-x-1"
+                    >
+                      <span>Launch Live Platform</span>
+                      <ArrowRight size={12} className="transform -rotate-45" />
+                    </a>
+                  )}
                   <button
                     onClick={() => setSelectedProject(null)}
-                    className="px-5 py-2.5 bg-white text-black font-mono text-[11px] tracking-wider uppercase hover:bg-neutral-900 hover:text-white transition-all duration-300 border border-white"
+                    className={`px-5 py-2.5 font-mono text-[11px] tracking-wider uppercase transition-all duration-300 border ${
+                      selectedProject.link
+                        ? 'bg-neutral-900 text-neutral-300 border-neutral-800 hover:bg-neutral-850 hover:text-white'
+                        : 'bg-white text-black border-white hover:bg-neutral-900 hover:text-white'
+                    }`}
                   >
-                    Acknowledge Specification
+                    Close Specification
                   </button>
                 </div>
 

@@ -1,4 +1,4 @@
-import { Project, Experience, Publication, Credential, Endorsement, Language } from './types';
+import { Project, Experience, Publication, Credential, Endorsement, Language, SpeakingEngagement, Service, Nomination } from './types';
 
 export const PERSONAL_INFO = {
   name: 'Lusimadio S Simao, MBA',
@@ -30,7 +30,8 @@ export const PROJECTS: Project[] = [
       impact: 'Boosted operational efficiency in pilot companies by 40%, enabling automatic parsing of regional regulatory frameworks and reducing enterprise compliance review times from weeks to minutes.',
       techStack: ['TypeScript', 'Gemini Pro SDK', 'Vector DB', 'Vite', 'Node.js']
     },
-    imageSeed: 'ai_studio'
+    imageSeed: 'ai_studio',
+    link: 'https://studio.afritranslate.co.za'
   },
   {
     id: 'cg-waste-data',
@@ -44,7 +45,8 @@ export const PROJECTS: Project[] = [
       impact: 'Helped recycle over 12,000 tons of waste through streamlined route coordination, lowering municipal carbon emissions by roughly 18% and empowering over 200 informal waste workers.',
       techStack: ['React', 'D3.js', 'PostgreSQL', 'Express', 'TailwindCSS']
     },
-    imageSeed: 'waste_data'
+    imageSeed: 'waste_data',
+    link: 'https://cgwastedata.co.za'
   },
   {
     id: 'afritrade-os',
@@ -58,7 +60,8 @@ export const PROJECTS: Project[] = [
       impact: 'Reduced cross-border transit administration delays by 35% for regional trade corridors, saving member SMEs significant operational overhead and clearing customs backlogs.',
       techStack: ['Node.js', 'Drizzle ORM', 'TypeScript', 'TailwindCSS', 'REST APIs']
     },
-    imageSeed: 'trade_os'
+    imageSeed: 'trade_os',
+    link: 'https://Afritradeos.co.za'
   },
   {
     id: 'afriquant-x-fintech',
@@ -86,7 +89,8 @@ export const PROJECTS: Project[] = [
       impact: 'Halved transaction times for property transfers and reduced title disputes in pilot regions by over 60%.',
       techStack: ['TypeScript', 'Node.js', 'PostgreSQL', 'Express']
     },
-    imageSeed: 'trade_os'
+    imageSeed: 'trade_os',
+    link: 'https://Afriestate.co.za'
   },
   {
     id: 'cognisacra',
@@ -334,61 +338,71 @@ export const CREDENTIALS: Credential[] = [
     id: 'cred-1',
     name: 'Master of Business Administration (MBA) - Major in International Business',
     issuer: 'Atlanta College of Liberal Arts and Science',
-    type: 'degree'
+    type: 'degree',
+    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'cred-2',
     name: 'Bachelor of Business Administration (BBA) - Major in Global Management',
     issuer: 'Monarch Business School Switzerland',
-    type: 'degree'
+    type: 'degree',
+    image: 'https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'cred-3',
     name: 'Lean Six Sigma Black Belt Certification (LSSBB)',
     issuer: 'Lean Six Sigma Academy of Amsterdam',
-    type: 'certification'
+    type: 'certification',
+    image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'cred-4',
     name: 'Project Management Capstone Micro Master',
     issuer: 'Rochester Institute of Technology',
-    type: 'training'
+    type: 'training',
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'cred-5',
     name: 'Design for Frater Efficiency - Edge Green Building Design',
     issuer: 'IFC (World Bank)',
-    type: 'training'
+    type: 'training',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'cred-6',
     name: 'Scrum Fundamentals Certified (SFC)',
     issuer: 'Project Management Institute',
-    type: 'certification'
+    type: 'certification',
+    image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'cred-7',
     name: 'Rhetoric: The Art of Persuasive Writing and Public Speaking & Exercising Leadership: Foundational Principles',
     issuer: 'Harvard University',
-    type: 'training'
+    type: 'training',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'cred-8',
     name: 'Business Marketing (Micro Master)',
     issuer: 'University of Maryland',
-    type: 'training'
+    type: 'training',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'cred-9',
     name: 'National Higher Certificate in Business Management',
     issuer: 'Regenesis Business School',
-    type: 'degree'
+    type: 'degree',
+    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'cred-10',
     name: 'Certified Oil and Gas Safety Management',
     issuer: 'OSHAcademy Safety and Health Training',
-    type: 'certification'
+    type: 'certification',
+    image: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=80&w=800'
   }
 ];
 
@@ -446,4 +460,118 @@ export const LANGUAGES: Language[] = [
     details: 'Active professional command supporting Central African advisory operations, bilateral dialogs, and regional summit coordination.'
   }
 ];
+
+export const SPEAKING_ENGAGEMENTS: SpeakingEngagement[] = [
+  {
+    id: 'speak-1',
+    title: 'AfCFTA Customs Integration & AI Summit 2026',
+    event: 'African Union Digital Trade Assembly',
+    date: 'September 14 - 16, 2026',
+    location: 'Kigali, Rwanda',
+    topic: 'Automating Cross-Border Compliance using AfriTrade OS and Machine Learning models.',
+    category: 'Trade & Logistics',
+    status: 'Upcoming'
+  },
+  {
+    id: 'speak-2',
+    title: 'African Green Building & Sustainable Finance Forum 2026',
+    event: 'EcoBuild Africa Symposium',
+    date: 'October 22 - 24, 2026',
+    location: 'Nairobi, Kenya',
+    topic: 'Sovereign ESG: Unlocking climate capital for sustainable sub-Saharan municipal waste & infrastructure projects.',
+    category: 'Climate & Sustainability',
+    status: 'Upcoming'
+  },
+  {
+    id: 'speak-3',
+    title: 'African Youth & Women in Tech Summit 2026',
+    event: 'Global Advisory & Empowerment Initiative',
+    date: 'November 05 - 07, 2026',
+    location: 'Cape Town, South Africa',
+    topic: 'Democratizing AI Leadership: Upskilling the next-generation workforce in the continental AI Decade.',
+    category: 'Leadership',
+    status: 'Upcoming'
+  },
+  {
+    id: 'speak-4',
+    title: 'SADC Sovereign Investment & Infrastructure Dialogue',
+    event: 'Southern Africa Investment Promotion Council',
+    date: 'December 10 - 12, 2026',
+    location: 'Luanda, Angola',
+    topic: 'Digital Registers & Decentralized Ledgers: Streamlining property registry systems & regional risk models.',
+    category: 'AI & Tech',
+    status: 'Upcoming'
+  }
+];
+
+export const SERVICES: Service[] = [
+  {
+    id: 'srv-1',
+    title: 'C-Suite AI & Strategic Growth Advisory',
+    targetAudience: 'C-Suite',
+    sectors: ['Artificial Intelligence', 'Logistics', 'Enterprise Software', 'Corporate Governance'],
+    description: 'High-level strategic advisory helping executives, corporate boards, and directors plan and scale robust Enterprise AI engines, workflow automation models (Afritranste AI Studio), and custom quantitative risk software.',
+    iconName: 'Cpu'
+  },
+  {
+    id: 'srv-2',
+    title: 'Sovereign ESG & Climate Finance Consulting',
+    targetAudience: 'Sovereign & Govt',
+    sectors: ['Climate & Sustainability', 'Waste Management', 'Green Infrastructure', 'Investment Promotion'],
+    description: 'Partnering with developers, municipalities, and financial hubs to engineer carbon-credit compliant waste trading networks, ESG policies, and sustainable infrastructure frameworks (EcoBuild Africa).',
+    iconName: 'Globe'
+  },
+  {
+    id: 'srv-3',
+    title: 'Cross-Border Logistics & AfCFTA Readiness Programs',
+    targetAudience: 'Mid-Career',
+    sectors: ['International Trade', 'Customs Operations', 'Digital Logistics'],
+    description: 'Systematic educational readiness courses, digital customs tools optimization, and masterclasses to equip trade operators and corporate managers to trade smoothly across African borders.',
+    iconName: 'Navigation'
+  },
+  {
+    id: 'srv-4',
+    title: 'Youth & Women Tech Upskilling Partnerships',
+    targetAudience: 'Youth & Women',
+    sectors: ['Artificial Intelligence', 'Fintech', 'Sovereign Digital Infrastructure'],
+    description: 'Bespoke mentorship initiatives, full-stack academies, and tech partnerships targeting women-led startups and youth leaders to master high-density AI modeling, fintech solutions, and mesh software.',
+    iconName: 'Users'
+  },
+  {
+    id: 'srv-5',
+    title: 'Micro-Enterprise ERP Advisory (Informal Retail & Trade)',
+    targetAudience: 'Youth & Women',
+    sectors: ['Informal Commerce', 'Fintech', 'Sovereign Economic Inclusivity'],
+    description: 'Providing voice-activated financial ledger structures (IBOS) and micro-finance readiness training to help female market traders and youth merchants digitize their operations and secure capital.',
+    iconName: 'Smartphone'
+  }
+];
+
+export const NOMINATIONS: Nomination[] = [
+  {
+    id: 'nom-1',
+    award: 'Outstanding Leadership in Technology Innovation Nominee',
+    category: 'Enterprise Digital Transformation',
+    year: '2025',
+    organization: 'Sovereign Digital Infrastructure Council',
+    description: 'Recognized for pioneering enterprise-grade AI automation engines (Afritranste AI Studio) and low-latency mesh communications protocols across Southern Africa.'
+  },
+  {
+    id: 'nom-2',
+    award: 'African Circular Economy Pioneer of the Year Finalist',
+    category: 'Sustainable Development & Climate Action',
+    year: '2025',
+    organization: 'SustainAfrica Coalition & Climate Action Hub',
+    description: 'Honored for building data-driven municipal waste systems and advocating for eco-sustainable building policies through EcoBuild Africa.'
+  },
+  {
+    id: 'nom-3',
+    award: 'Outstanding Advocate for Continental Trade Policy Nominee',
+    category: 'Intra-African Trade & Integration Advocacy',
+    year: '2024',
+    organization: 'African Trade Forum / AfCFTA Youth Chamber',
+    description: 'Nominated for providing continuous thought-leadership, policy analysis, and digital tools promoting trade seamlessness under the AfCFTA.'
+  }
+];
+
 

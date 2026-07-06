@@ -21,8 +21,12 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
 
   const navItems = [
     { name: 'Identity', href: '#identity' },
+    { name: 'Services', href: '#services' },
     { name: 'Focus & History', href: '#history' },
     { name: 'Technologies', href: '#technologies' },
+    { name: 'Accreditations', href: '#certifications' },
+    { name: 'Nominations', href: '#nominations' },
+    { name: 'Speaking', href: '#speaking' },
     { name: 'Publications', href: '#publications' },
     { name: 'Endorsements', href: '#endorsements' },
     { name: 'Contact', href: '#contact' },

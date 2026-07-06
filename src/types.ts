@@ -11,6 +11,7 @@ export interface Project {
     techStack: string[];
   };
   imageSeed: string; // for custom stylized vector placeholders
+  link?: string;
 }
 
 export interface Experience {
@@ -37,6 +38,7 @@ export interface Credential {
   name: string;
   issuer: string;
   type: 'degree' | 'certification' | 'training';
+  image?: string;
 }
 
 export interface ContactMessage {
@@ -62,5 +64,34 @@ export interface Language {
   fluency: string;
   percentage: number;
   details: string;
+}
+
+export interface SpeakingEngagement {
+  id: string;
+  title: string;
+  event: string;
+  date: string;
+  location: string;
+  topic: string;
+  category: 'AI & Tech' | 'Climate & Sustainability' | 'Trade & Logistics' | 'Leadership';
+  status: 'Upcoming' | 'Past';
+}
+
+export interface Service {
+  id: string;
+  title: string;
+  targetAudience: 'C-Suite' | 'Youth & Women' | 'Mid-Career' | 'Sovereign & Govt';
+  sectors: string[];
+  description: string;
+  iconName: string; // references lucide icon
+}
+
+export interface Nomination {
+  id: string;
+  award: string;
+  category: string;
+  year: string;
+  organization: string;
+  description: string;
 }
 
