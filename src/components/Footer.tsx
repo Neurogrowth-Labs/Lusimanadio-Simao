@@ -101,7 +101,7 @@ export default function Footer() {
           {/* Left Side: Branding */}
           <div className="text-center md:text-left space-y-1.5">
             <div className="font-display font-bold text-sm text-white tracking-widest uppercase">
-              Mr. Lusimadio Soki Simao, MBA
+              Mr. Lusimanadio Soki Simao, MBA
             </div>
             <p className="font-mono text-[9px] text-neutral-500 uppercase tracking-widest">
               © 2026 L.S. Simao. All rights reserved. Registered Business Intelligence Systems.

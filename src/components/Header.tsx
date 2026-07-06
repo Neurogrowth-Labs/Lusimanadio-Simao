@@ -29,7 +29,6 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
     { name: 'Speaking', href: '#speaking' },
     { name: 'Publications', href: '#publications' },
     { name: 'Endorsements', href: '#endorsements' },
-    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -41,7 +40,7 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
           : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="w-full px-6 md:px-12 flex items-center justify-between relative">
         {/* Logo - Powerful & Spiritual Executive Emblem */}
         <a
           href="#identity"
@@ -73,21 +72,22 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
           </div>
         </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-10">
-          <div className="flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="relative text-xs font-mono tracking-widest text-neutral-400 hover:text-white transition-colors duration-300 py-1 uppercase group"
-              >
-                {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
-          </div>
+        {/* Desktop Navigation (Centered) */}
+        <nav className="hidden xl:flex items-center space-x-6 absolute left-1/2 -translate-x-1/2">
+          {navItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="relative text-xs font-mono tracking-widest text-neutral-400 hover:text-white transition-colors duration-300 py-1 uppercase group"
+            >
+              {item.name}
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
+            </a>
+          ))}
+        </nav>
 
+        {/* Desktop Actions (Far Corner Right) */}
+        <div className="hidden xl:flex items-center space-x-4">
           <a
             href="#contact"
             className="flex items-center space-x-1.5 font-mono text-xs tracking-wider border border-white text-black bg-white hover:bg-black hover:text-white transition-all duration-300 px-4 py-2 uppercase"
@@ -104,10 +104,10 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
           >
             {theme === 'light' ? <Moon size={14} /> : <Sun size={14} />}
           </button>
-        </nav>
+        </div>
 
         {/* Mobile controls & Menu Button */}
-        <div className="flex items-center space-x-3 md:hidden">
+        <div className="flex items-center space-x-3 xl:hidden">
           <button
             onClick={toggleTheme}
             className="p-1.5 border border-neutral-800 text-neutral-400 hover:text-white transition-all duration-300 focus:outline-none flex items-center justify-center bg-transparent"
@@ -135,7 +135,7 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="fixed top-[73px] left-0 w-full h-[calc(100vh-73px)] bg-neutral-950/98 backdrop-blur-lg flex flex-col justify-between p-8 border-t border-neutral-900 z-40 md:hidden"
+            className="fixed top-[73px] left-0 w-full h-[calc(100vh-73px)] bg-neutral-950/98 backdrop-blur-lg flex flex-col justify-between p-8 border-t border-neutral-900 z-40 xl:hidden"
           >
             <nav className="flex flex-col space-y-8 mt-8">
               {navItems.map((item, index) => (

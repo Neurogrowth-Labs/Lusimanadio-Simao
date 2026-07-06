@@ -1,10 +1,10 @@
 import { Project, Experience, Publication, Credential, Endorsement, Language, SpeakingEngagement, Service, Nomination } from './types';
 
 export const PERSONAL_INFO = {
-  name: 'Lusimadio S Simao, MBA',
+  name: 'Lusimanadio Soki Simao, MBA',
   title: 'Founder & CEO | Strategic Growth & AI Leader | Sustainability & Trade Advocate',
   bioBrief: 'A visionary African executive, entrepreneur, and strategist with extensive leadership experience across artificial intelligence, sustainable development, international trade, investment promotion, media, and governance.',
-  bioFull: 'Mr. Lusimadio Soki Simao is widely recognized for founding and scaling impact-driven institutions that align innovation, policy, and inclusive economic growth across Africa. As an executive at the intersection of tech, environmental policy, and trade, his career is defined by strategic leadership, AI-driven innovation, and continental trade development to shape future-ready African institutions and globally competitive enterprises.',
+  bioFull: 'Mr. Lusimanadio Soki Simao, MBA is widely recognized for founding and scaling impact-driven institutions that align innovation, policy, and inclusive economic growth across Africa. As an executive at the intersection of tech, environmental policy, and trade, his career is defined by strategic leadership, AI-driven innovation, and continental trade development to shape future-ready African institutions and globally competitive enterprises.',
   portraitPath: 'https://media.licdn.com/dms/image/v2/D4D03AQF97hhNCtJS0Q/profile-displayphoto-crop_800_800/B4DZoo4HDmKUAI-/0/1761622390771?e=1784160000&v=beta&t=ne2sUlqerAbBrARFVcXjws8263wGRCLIqh6Rl7wbtZo',
   calendlyUrl: 'https://calendly.com/simao-neurogrowthlabs/30min',
   contacts: [
@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
     title: 'Afritranste AI Studio',
     subtitle: 'Enterprise AI & Automation Engine',
     description: 'An AI-driven technical workspace for enterprise transformation, designed to streamline corporate workflows and support intelligent policy analysis.',
-    category: 'AI & Software',
+    category: 'Business Communication',
     details: {
       problem: 'African enterprises face unique scale, language, and operational friction that off-the-shelf Western AI tools fail to address, causing low local adoption and slow policy alignment.',
       solution: 'A highly customized, lightweight LLM orchestrator and document intelligence hub tailored specifically to corporate governance, regional languages, and local compliance standards.',
@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
     title: 'CG Waste Data',
     subtitle: 'Circular Economy Intelligence Platform',
     description: 'A data platform optimizing municipal solid waste management, logistics route tracking, and circular-economy resource trading in metropolitan areas.',
-    category: 'Climate & Sustainability',
+    category: 'Construction Demolishing Waste Management',
     details: {
       problem: 'Uncoordinated waste collection and a lack of real-time supply chain transparency in South African cities leads to severe environmental hazards, clogged drainages, and massive landfill pressure.',
       solution: 'An end-to-end telemetry and logistics dashboard that connects waste aggregators, recycling facilities, and local municipalities to schedule and track collections dynamically.',
@@ -54,7 +54,7 @@ export const PROJECTS: Project[] = [
     title: 'AfriTrade OS',
     subtitle: 'Intra-African Trade & Logistics System',
     description: 'A smart digital logistics operating system enabling intra-African cross-border commerce, duty calculations, and trade alignment under the AfCFTA framework.',
-    category: 'Trade & Logistics',
+    category: 'Intra Trade Digital Infrastructure',
     details: {
       problem: 'Intra-African trade is bogged down by opaque customs processes, manual paperwork, and shifting bilateral agreements, making cross-border shipping more expensive than intercontinental trade.',
       solution: 'A unified digital platform featuring smart customs document generation, real-time tariff lookup, and automated compliance verification mapped precisely to the AfCFTA guidelines.',
@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
     title: 'AfriQuant X Fintech',
     subtitle: 'AI Financial Intelligence & Investment Hub',
     description: 'A digital ecosystem providing quantitative AI analytics and structured fintech opportunities to support capital allocation in emerging markets.',
-    category: 'AI & Software',
+    category: 'Fintech Infrastructure',
     details: {
       problem: 'High investment risks and a lack of granular market intelligence in emerging economies inhibit capital flow and digital innovation within African financial markets.',
       solution: 'An algorithmic fintech intelligence dashboard that executes quantitative risk modeling, real-time liquidity analysis, and optimized investment matching.',
@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
     title: 'AfriEstate',
     subtitle: 'Digital Real Estate & Land Registry',
     description: 'A decentralized platform designed to streamline real estate registration, property trade, and land title management across regional borders.',
-    category: 'Trade & Logistics',
+    category: 'REIT Management Infrastructure',
     details: {
       problem: 'Opaque land registers and slow title transfer workflows create legal insecurity and inhibit institutional real estate investments.',
       solution: 'A cryptographically secure property ledger integrating smart contracts and automated ownership verification.',
@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     title: 'CogniSacra',
     subtitle: 'Cultural & Intellectual Asset Archiving',
     description: 'An AI-driven archive and semantic network preserving African cultural heritage, oral histories, and indigenous knowledge.',
-    category: 'AI & Software',
+    category: 'EdTech Infrastructure',
     details: {
       problem: 'Rapid urbanization and lack of structured digital documentation risk erasing rich African oral histories and indigenous practices.',
       solution: 'A cognitive natural language engine that processes, indexes, and semantically links recorded oral testimonies and historical logs.',
@@ -112,7 +112,7 @@ export const PROJECTS: Project[] = [
     title: 'Neuro NetWorks',
     subtitle: 'Distributed Broadband & Compute Systems',
     description: 'A decentralized telecommunications mesh network designed to optimize local broadband sharing and edge compute power in dense communities.',
-    category: 'AI & Software',
+    category: 'Network Management Infrastructure',
     details: {
       problem: 'Prohibitive infrastructure costs and centralized network congestion lead to slow, expensive, and unstable internet in dense urban spaces.',
       solution: 'A software-defined community mesh protocol enabling peer-to-peer compute sharing and dynamic bandwidth allocation.',
@@ -126,7 +126,7 @@ export const PROJECTS: Project[] = [
     title: 'Enoviq AI Sommelier',
     subtitle: 'Sensory Data & Supply Chain Optimizer',
     description: 'An advanced AI advisory tool designed to optimize the sensory profile, retail distribution, and storage conditions of fine regional beverages.',
-    category: 'AI & Software',
+    category: 'Social and Community',
     details: {
       problem: 'Fluctuating temperature control and poor sensory grading in the supply chain result in high waste and inconsistent beverage quality.',
       solution: 'An AI sensory modeling tool integrating temperature telemetry and biochemical analytics to predict storage longevity and retail demand.',
@@ -140,7 +140,7 @@ export const PROJECTS: Project[] = [
     title: 'Informal Business Operation System (IBOS)',
     subtitle: 'Micro-Enterprise ERP & Ledger',
     description: 'A lightweight, voice-activated ERP and transaction ledger designed specifically for informal micro-merchants and street traders.',
-    category: 'Trade & Logistics',
+    category: 'Informal Business Digital Infrastructure',
     details: {
       problem: 'Millions of informal merchants operate without structured bookkeeping, locking them out of formal banking, credit, and supply chain benefits.',
       solution: 'A highly intuitive, offline-capable mobile ledger using voice-to-text inputs and lightweight automated inventory tracking.',
@@ -154,7 +154,7 @@ export const PROJECTS: Project[] = [
     title: 'RescueBot AI',
     subtitle: 'Emergency Coordination & Smart Response',
     description: 'An AI-driven incident management and rescue coordination system optimizing emergency response and regional disaster management.',
-    category: 'AI & Software',
+    category: 'Autonomous Disaster Response Software',
     details: {
       problem: 'Inefficient emergency response routing and manual dispatch methods during extreme weather events lead to unnecessary delays, endangering lives and properties.',
       solution: 'An intelligent spatial routing system that consolidates public emergency reports, analyzes drone telemetry, and outputs high-priority dispatch schedules for emergency services.',
@@ -363,73 +363,92 @@ export const PUBLICATIONS: Publication[] = [
 export const CREDENTIALS: Credential[] = [
   {
     id: 'cred-1',
-    name: 'Master of Business Administration (MBA) - Major in International Business',
-    issuer: 'Atlanta College of Liberal Arts and Science',
-    type: 'degree',
-    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800'
+    name: 'Associate Member',
+    issuer: 'CIM Chartered Managers Canada',
+    type: 'certification',
+    image: 'https://media.licdn.com/dms/image/v2/D4D2DAQFgAy9QQf53iA/profile-treasury-image-shrink_8192_8192/B4DZ2s995THcAg-/0/1776723419732?e=1783980000&v=beta&t=M48mWsUUy-TiG52j2U0Fac71h-HRRpLG5b2my7PT7PI',
+    description: 'This certificate recognizes that the recipient has successfully met the official membership requirements established by CIM Chartered Managers Canada. Consequently, the holder is granted all the professional rights, privileges, and status associated with being an Associate Member of the Institute.',
+    year: '2026'
   },
   {
     id: 'cred-2',
-    name: 'Bachelor of Business Administration (BBA) - Major in Global Management',
-    issuer: 'Monarch Business School Switzerland',
-    type: 'degree',
-    image: 'https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=800'
+    name: 'Oil and Gas Safety Management',
+    issuer: 'OSHAcademy Occupational Safety & Health Training',
+    type: 'certification',
+    image: 'https://media.licdn.com/dms/image/v2/D4D2DAQEPZddG4bdISg/profile-treasury-image-shrink_800_800/B4DZheYjx.GkAY-/0/1753930154726?e=1783980000&v=beta&t=h_XNBasDpMDs_Oimen5KERwySc6lBonkeLj0cSUwxIM',
+    description: 'This certificate certifies that Lusimadio Soki Simao has successfully completed all academic and exam requirements for the Oil and Gas Safety Management training course. The program verifies proficiency in critical safety areas including hazard prevention, safety culture, writing safety policies, and conducting on-the-job training in compliance with industry standards.',
+    year: '2025'
   },
   {
     id: 'cred-3',
-    name: 'Lean Six Sigma Black Belt Certification (LSSBB)',
-    issuer: 'Lean Six Sigma Academy of Amsterdam',
-    type: 'certification',
-    image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800'
+    name: 'Introduction to OSHAcademy',
+    issuer: 'OSHAcademy Occupational Safety & Health Training',
+    type: 'training',
+    image: 'https://media.licdn.com/dms/image/v2/D4D2DAQET_ZSq6cCeLw/profile-treasury-image-shrink_800_800/B4DZhIcA3AHAAc-/0/1753561961665?e=1783980000&v=beta&t=q8c6vzIM7Rcd6xzOyo_BBTdHwlBHgvNtzMvB8OTYjS8',
+    description: "This certificate verifies that the recipient has successfully completed all assignments and exam requirements for the 'Introduction to OSHAcademy' course. The training program covers essential system navigation, student dashboard management, and certification validation procedures required to effectively utilize OSHAcademy resources.",
+    year: '2025'
   },
   {
     id: 'cred-4',
-    name: 'Project Management Capstone Micro Master',
-    issuer: 'Rochester Institute of Technology',
+    name: 'ISO 14001:2015 Environmental Management System Awareness',
+    issuer: 'The Knights of Safety',
     type: 'training',
-    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800'
+    image: 'https://media.licdn.com/dms/image/v2/D4D2DAQFb7Znfn3aKJg/profile-treasury-image-shrink_800_800/B4DZfm0Tt1GYAY-/0/1751924162809?e=1783980000&v=beta&t=o5EAGVU4qDLOWW_-N1HFi0dD8B3uYVgNy4iKabiTiDg',
+    description: 'This certificate demonstrates successful completion of the ISO 14001:2015 Environmental Management System Awareness course by Lusimadio Soki Simao. Issued by The Knights of Safety, the credential validates foundational knowledge of international standards for environmental management systems.',
+    year: '2025'
   },
   {
     id: 'cred-5',
-    name: 'Design for Frater Efficiency - Edge Green Building Design',
-    issuer: 'IFC (World Bank)',
+    name: 'ISO 9001:2015 Quality Management System Foundations',
+    issuer: 'The Knights of Safety',
     type: 'training',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800'
+    image: 'https://media.licdn.com/dms/image/v2/D4D2DAQGkdj-Cmeq83A/profile-treasury-image-shrink_800_800/B4DZfh0PmLHMAY-/0/1751840259849?e=1783980000&v=beta&t=AIpd-UlGgZyujqY-5uu0RB5yWJRepHYNKhnzHRQdQIQ',
+    description: 'This certificate confirms that Lusimadio Soki Simao has successfully completed the course on ISO 9001:2015 Quality Management System Foundations. Issued by The Knights of Safety, the credential verifies foundational knowledge and understanding of international quality management principles and standards.',
+    year: '2025'
   },
   {
     id: 'cred-6',
-    name: 'Scrum Fundamentals Certified (SFC)',
-    issuer: 'Project Management Institute',
-    type: 'certification',
-    image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800'
+    name: 'Data Analytics Essentials',
+    issuer: 'Cisco Networking Academy',
+    type: 'training',
+    image: 'https://media.licdn.com/dms/image/v2/D4D2DAQGJOwsZO8auJQ/profile-treasury-document-cover-images_480/B4DZVO1okjGkAw-/0/1740784439432?e=1783980000&v=beta&t=8jPKdQF5FNXK5WEJzO8IICcsdNh4BOm2GLM1MKNoW1o',
+    description: 'This certificate verifies that the recipient has successfully completed the Data Analytics Essentials course offered through the Cisco Networking Academy program. The credential demonstrates foundational knowledge in data analytics concepts and methodologies as certified by the issuing organization.',
+    year: '2025'
   },
   {
     id: 'cred-7',
-    name: 'Rhetoric: The Art of Persuasive Writing and Public Speaking & Exercising Leadership: Foundational Principles',
-    issuer: 'Harvard University',
+    name: 'Designing for Greater Efficiency',
+    issuer: 'IFC (World Bank)',
     type: 'training',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800'
+    image: 'https://media.licdn.com/dms/image/v2/D4D2DAQEU4D0YJ16ouQ/profile-treasury-image-shrink_800_800/B4DZVIpItjHwAc-/0/1740680499559?e=1783980000&v=beta&t=GNBq582im1DqGQ1mbNQ32_RbLjqYFawPFJe-ov0edzM',
+    description: "This certificate is awarded by the International Finance Corporation to verify the successful completion of the 'Designing for Greater Efficiency' online course. It recognizes the recipient's demonstrated knowledge of climate-responsive and resource-efficient building design.",
+    year: '2025'
   },
   {
     id: 'cred-8',
-    name: 'Business Marketing (Micro Master)',
-    issuer: 'University of Maryland',
+    name: 'Introduction to Critical Infrastructure Protection',
+    issuer: 'OPSWAT Academy',
     type: 'training',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
+    image: 'https://media.licdn.com/dms/image/v2/D4D2DAQHLDf0QgJl05w/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1738932193620?e=1783980000&v=beta&t=KUbnqV2uoTyvTDqA2YXRQAveIeAdBh0Gh8Ta1VehheQ',
+    description: 'This credential certifies that the recipient has successfully met the standards and requirements to graduate from the Introduction to Critical Infrastructure Protection (CIP) program. Authorized by OPSWAT Academy, this certification validates foundational knowledge in protecting critical infrastructure assets from modern cybersecurity threats.',
+    year: '2025'
   },
   {
     id: 'cred-9',
-    name: 'National Higher Certificate in Business Management',
-    issuer: 'Regenesis Business School',
-    type: 'degree',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800'
+    name: 'Certified Lean Six Sigma Black Belt',
+    issuer: 'Six Sigma Academy Amsterdam',
+    type: 'certification',
+    image: 'https://media.licdn.com/dms/image/v2/D4D2DAQEHrng2stPeJg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1732472115554?e=1783980000&v=beta&t=mx_rsnUYI_kDJW5bBw8vo9J4PRspNnr2cNGvnyoNras',
+    description: 'This professional credential certifies successful completion of the curriculum and associated evaluation for the Certified Lean Six Sigma Black Belt program at the Six Sigma Academy Amsterdam. The program is an accredited activity carrying 15 CPD credits, validating advanced expertise in continuous improvement and process optimization methodologies.',
+    year: '2024'
   },
   {
     id: 'cred-10',
     name: 'Certified Oil and Gas Safety Management',
-    issuer: 'OSHAcademy Safety and Health Training',
+    issuer: 'OSHAcademy Occupational Safety & Health Training',
     type: 'certification',
-    image: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=80&w=800'
+    description: 'Professional training validating competence in industrial safety management, environmental hazard mitigation, occupational health regulations, and energy-sector safety auditing.',
+    year: '2023'
   }
 ];
 
@@ -443,7 +462,7 @@ export const ENDORSEMENTS: Endorsement[] = [
   },
   {
     id: 'end-2',
-    quote: "At NeuroGrowth Labs, Lusimadio and his software development teams did not just build standard analytics; they created custom corporate governance instruments that bridged complex regional compliance protocols. His technical foresight is outstanding.",
+    quote: "At NeuroGrowth Labs, Lusimanadio and his software development teams did not just build standard analytics; they created custom corporate governance instruments that bridged complex regional compliance protocols. His technical foresight is outstanding.",
     author: "Elena Rostov-Vance",
     role: "Chief Innovation Officer",
     organization: "Sovereign Digital Infrastructure Fund"
@@ -457,7 +476,7 @@ export const ENDORSEMENTS: Endorsement[] = [
   },
   {
     id: 'end-4',
-    quote: "Publishing premium regional wellness literatures and steering modern business growth playbooks require a Rare leader. Lusimadio Simao possesses the unique capability of driving high-density executive ideas into actionable, scaled enterprises.",
+    quote: "Publishing premium regional wellness literatures and steering modern business growth playbooks require a Rare leader. Lusimanadio Soki Simao possesses the unique capability of driving high-density executive ideas into actionable, scaled enterprises.",
     author: "Nomalanga Sibanda",
     role: "Managing Editor & Media Strategist",
     organization: "The Southern African Media Hub"
@@ -614,6 +633,22 @@ export const NOMINATIONS: Nomination[] = [
     year: '2023',
     organization: 'Mentorship and Volunteerism Excellence Awards',
     description: 'Recognized for pioneering local and regional sustainable models that promote eco-consciousness and carbon reduction goals.'
+  },
+  {
+    id: 'nom-6',
+    award: 'African Entrepreneurs and Business Professionals Award 2023',
+    category: 'Entrepreneurship & Business Leadership',
+    year: '2023',
+    organization: 'City Scope Africa',
+    description: 'Recognized for outstanding entrepreneurship, corporate strategy, and business excellence across the African continent.'
+  },
+  {
+    id: 'nom-7',
+    award: 'Caballero Universal Angola 2025',
+    category: 'Cultural Diplomacy & International Representation',
+    year: '2025',
+    organization: 'Caballero Universal - International Male Pageant Organization',
+    description: 'Appointed as the national representative to promote Angolan culture, leadership excellence, and social development initiatives on the global stage.'
   }
 ];
 

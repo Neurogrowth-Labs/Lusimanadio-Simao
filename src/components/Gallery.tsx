@@ -6,13 +6,11 @@ import { Project } from '../types';
 
 export default function Gallery() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [filter, setFilter] = useState<'All' | 'AI & Software' | 'Climate & Sustainability' | 'Trade & Logistics'>('All');
+  const [filter, setFilter] = useState<string>('All');
 
-  const categories: ('All' | 'AI & Software' | 'Climate & Sustainability' | 'Trade & Logistics')[] = [
+  const categories: string[] = [
     'All',
-    'AI & Software',
-    'Climate & Sustainability',
-    'Trade & Logistics',
+    ...Array.from(new Set(PROJECTS.map(proj => proj.category))),
   ];
 
   const filteredProjects = filter === 'All'
@@ -107,18 +105,18 @@ export default function Gallery() {
           </div>
           
           {/* Custom Black & White Filter Controls */}
-          <div className="flex flex-wrap gap-2 mt-6 md:mt-0 max-w-lg">
+          <div className="flex flex-wrap gap-2 mt-6 md:mt-0 max-w-2xl justify-end">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-3 py-1.5 font-mono text-[10px] tracking-widest uppercase transition-all duration-300 ${
+                className={`px-3 py-1.5 font-mono text-[9px] tracking-widest uppercase transition-all duration-300 ${
                   filter === cat
                     ? 'bg-white text-black font-semibold'
                     : 'bg-neutral-900 text-neutral-400 border border-neutral-850 hover:text-white hover:border-neutral-700'
                 }`}
               >
-                {cat === 'All' ? 'All Systems' : cat.split(' & ')[0]}
+                {cat === 'All' ? 'All Systems' : cat}
               </button>
             ))}
           </div>

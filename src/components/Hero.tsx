@@ -36,8 +36,8 @@ export default function Hero({ onOpenQr }: HeroProps) {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="font-display font-bold text-5xl md:text-7xl xl:text-8xl tracking-tight text-white leading-[0.95]"
             >
-              LUSIMADIO<br />
-              <span className="text-neutral-500">SOKI SIMAO</span>
+              LUSIMANADIO<br />
+              <span className="text-neutral-500">SOKI SIMAO, MBA</span>
             </motion.h1>
             
             <motion.p
@@ -128,7 +128,7 @@ export default function Hero({ onOpenQr }: HeroProps) {
             <div className="absolute inset-0 overflow-hidden bg-neutral-900 border border-neutral-800">
               <img
                 src={PERSONAL_INFO.portraitPath}
-                alt="Mr. Lusimadio Soki Simao"
+                alt="Mr. Lusimanadio Soki Simao, MBA"
                 className="w-full h-full object-cover grayscale brightness-95 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 ease-out"
                 referrerPolicy="no-referrer"
               />

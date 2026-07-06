@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   subtitle: string;
   description: string;
-  category: 'AI & Software' | 'Climate & Sustainability' | 'Trade & Logistics';
+  category: string;
   details: {
     problem: string;
     solution: string;
@@ -39,6 +39,8 @@ export interface Credential {
   issuer: string;
   type: 'degree' | 'certification' | 'training';
   image?: string;
+  description?: string;
+  year?: string;
 }
 
 export interface ContactMessage {

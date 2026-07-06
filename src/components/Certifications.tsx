@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Award, ShieldCheck, FileCheck, Search, X, ChevronRight } from 'lucide-react';
+import { Award, ShieldCheck, X, Calendar, Building, FileCheck, Shield, ExternalLink, RefreshCw } from 'lucide-react';
 import { CREDENTIALS } from '../data';
-import { Credential } from '../types';
 
 export default function Certifications() {
-  const [activeTab, setActiveTab] = useState<'all' | 'degree' | 'certification' | 'training'>('all');
-  const [selectedCred, setSelectedCred] = useState<Credential | null>(null);
+  const [activeTab, setActiveTab] = useState<'all' | 'certification' | 'training'>('all');
+  const [selectedCred, setSelectedCred] = useState<typeof CREDENTIALS[0] | null>(null);
 
   const tabs = [
     { key: 'all', label: 'All Credentials' },
-    { key: 'degree', label: 'Degrees' },
     { key: 'certification', label: 'Board Certifications' },
     { key: 'training', label: 'Executive Training' },
   ] as const;
@@ -34,7 +32,7 @@ export default function Certifications() {
             </h2>
           </div>
           <p className="font-sans text-neutral-400 text-sm max-w-md mt-4 md:mt-0 leading-relaxed">
-            A visual register of verified academic degrees, professional board certifications, and specialist credentials issued by premier global institutions.
+            A visual register of verified professional board certifications, executive training, and specialist credentials issued by premier global institutions. Click any credential to inspect its audit verification.
           </p>
         </div>
 
@@ -67,13 +65,13 @@ export default function Certifications() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
                 onClick={() => setSelectedCred(cred)}
-                className="group relative bg-neutral-950 border border-neutral-900 hover:border-neutral-800 cursor-pointer transition-all duration-500 overflow-hidden aspect-[4/3]"
+                className="group bg-neutral-950 border border-neutral-900 hover:border-neutral-800 transition-all duration-500 overflow-hidden flex flex-col cursor-pointer transform hover:-translate-y-1"
               >
                 {/* Visual Certificate Frame container */}
-                <div className="w-full h-full relative bg-neutral-900 flex items-center justify-center">
+                <div className="w-full relative bg-neutral-900 flex items-center justify-center aspect-[4/3] border-b border-neutral-900 overflow-hidden">
                   
                   {/* Subtle paper textures or mock lines for certificate */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-transparent to-black/20 z-10 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-black/85 via-transparent to-black/20 z-10 pointer-events-none" />
                   
                   {/* Real image if available, fallback beautifully */}
                   {cred.image ? (
@@ -81,7 +79,7 @@ export default function Certifications() {
                       src={cred.image}
                       alt={cred.name}
                       referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-102 transition-all duration-700"
                     />
                   ) : (
                     <div className="w-full h-full p-6 flex flex-col justify-between border-4 border-double border-neutral-800 m-2 relative bg-neutral-950/40 text-center">
@@ -105,23 +103,54 @@ export default function Certifications() {
                     </div>
                   )}
 
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-neutral-950/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex flex-col items-center justify-center space-y-2 p-4">
-                    <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                      <Search size={16} />
-                    </div>
-                    <span className="font-mono text-[9px] tracking-widest text-neutral-300 uppercase transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                      Inspect Credential
-                    </span>
-                    <p className="font-display font-bold text-[10px] text-white text-center tracking-wide uppercase line-clamp-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 max-w-xs">
-                      {cred.name}
-                    </p>
-                  </div>
-
                   {/* Top-right floating type badge */}
                   <div className="absolute top-3 right-3 z-30">
                     <span className="px-2 py-0.5 font-mono text-[8px] bg-neutral-950/90 border border-neutral-800 text-neutral-400 uppercase tracking-widest">
-                      {cred.type === 'degree' ? 'Degree' : cred.type === 'certification' ? 'Board Cert' : 'Executive Training'}
+                      {cred.type === 'certification' ? 'Board Cert' : 'Executive Training'}
+                    </span>
+                  </div>
+
+                  {/* Hover overlay indicator */}
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
+                    <div className="px-4 py-2 bg-white text-black font-mono text-[10px] tracking-widest uppercase flex items-center space-x-1.5 font-medium">
+                      <ShieldCheck size={14} className="text-emerald-600" />
+                      <span>Audit Verification</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Caption / Information details displayed directly underneath */}
+                <div className="p-6 flex-1 flex flex-col justify-between bg-neutral-950">
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-start gap-2">
+                      <span className="font-mono text-[9px] text-neutral-500 uppercase tracking-widest">
+                        {cred.issuer}
+                      </span>
+                      {cred.year && (
+                        <span className="font-mono text-[10px] text-neutral-400">
+                          {cred.year}
+                        </span>
+                      )}
+                    </div>
+                    
+                    <h3 className="font-display font-bold text-sm text-white tracking-tight leading-snug line-clamp-2 group-hover:text-neutral-300 transition-colors">
+                      {cred.name}
+                    </h3>
+
+                    {cred.description && (
+                      <p className="font-sans text-neutral-400 text-xs leading-relaxed line-clamp-3">
+                        {cred.description}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="pt-4 mt-4 border-t border-neutral-900/80 flex items-center justify-between">
+                    <span className="font-mono text-[8px] text-neutral-600 uppercase tracking-widest">
+                      REG: {cred.id.toUpperCase()}-NGL-{cred.year || '2026'}
+                    </span>
+                    <span className="flex items-center text-neutral-500 text-[9px] font-mono uppercase tracking-widest group-hover:text-emerald-400 transition-colors">
+                      <ShieldCheck size={11} className="text-emerald-500 mr-1" />
+                      Inspect
                     </span>
                   </div>
                 </div>
@@ -130,137 +159,142 @@ export default function Certifications() {
           </AnimatePresence>
         </div>
 
-        {/* Immersive Credential Modal Overlay */}
+        {/* Dynamic High-Tech Credential Audit Verification Modal */}
         <AnimatePresence>
           {selectedCred && (
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-              
-              {/* Modal Backdrop */}
+              {/* Backdrop */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setSelectedCred(null)}
-                className="absolute inset-0 bg-neutral-950/90 backdrop-blur-md"
+                className="absolute inset-0 bg-neutral-950/95 backdrop-blur-md"
               />
 
-              {/* Modal Content Container */}
+              {/* Modal Card */}
               <motion.div
-                initial={{ opacity: 0, y: 40, scale: 0.98 }}
+                initial={{ opacity: 0, y: 50, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 20, scale: 0.98 }}
-                transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                className="bg-neutral-950 border border-neutral-850 w-full max-w-4xl max-h-[90vh] overflow-y-auto relative z-10 shadow-2xl p-6 md:p-8 flex flex-col lg:flex-row gap-8"
+                exit={{ opacity: 0, y: 30, scale: 0.98 }}
+                transition={{ type: 'spring', damping: 25, stiffness: 180 }}
+                className="bg-neutral-950 border border-neutral-800 w-full max-w-4xl max-h-[85vh] overflow-y-auto relative z-10 shadow-2xl flex flex-col md:flex-row"
               >
                 {/* Close Button */}
                 <button
                   onClick={() => setSelectedCred(null)}
-                  className="absolute top-5 right-5 p-2 bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-white transition-all z-20 focus:outline-none"
-                  aria-label="Close certificate viewer"
+                  className="absolute top-6 right-6 p-2 bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-white transition-all z-40 focus:outline-none"
+                  aria-label="Close verification panel"
                 >
                   <X size={16} />
                 </button>
 
-                {/* Left: Interactive Certificate Image Frame */}
-                <div className="lg:w-3/5 bg-neutral-900 border border-neutral-850 relative flex items-center justify-center aspect-[4/3] self-center overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none z-10" />
-                  {selectedCred.image ? (
-                    <img
-                      src={selectedCred.image}
-                      alt={selectedCred.name}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-contain"
-                    />
-                  ) : (
-                    <div className="w-full h-full p-8 flex flex-col justify-between border-8 border-double border-neutral-800 m-4 bg-neutral-950/80 text-center text-white relative">
-                      <div className="absolute inset-2 border border-neutral-800/40 pointer-events-none" />
-                      <div className="flex justify-center pt-4">
-                        <Award size={36} className="text-white animate-pulse" />
+                {/* Left Side: Certificate Artwork/Visual Frame */}
+                <div className="w-full md:w-1/2 bg-neutral-900/50 p-8 flex flex-col justify-center items-center border-b md:border-b-0 md:border-r border-neutral-900 relative">
+                  <div className="absolute top-4 left-4 flex items-center space-x-1.5 font-mono text-[8px] text-neutral-500 tracking-wider">
+                    <Shield size={10} className="text-emerald-500" />
+                    <span>SECURE VISUAL REGISTER</span>
+                  </div>
+
+                  <div className="w-full max-w-sm aspect-[4/3] bg-neutral-950 border border-neutral-800 p-2 shadow-2xl relative group overflow-hidden mt-6 md:mt-0">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-transparent to-black/20 pointer-events-none z-10" />
+                    {selectedCred.image ? (
+                      <img
+                        src={selectedCred.image}
+                        alt={selectedCred.name}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                      />
+                    ) : (
+                      <div className="w-full h-full p-4 flex flex-col justify-between border-2 border-dashed border-neutral-800 relative bg-neutral-900 text-center">
+                        <div className="flex justify-center pt-2">
+                          <Award size={32} className="text-neutral-600" />
+                        </div>
+                        <div className="space-y-1">
+                          <p className="font-display font-bold text-[10px] text-neutral-400 tracking-wide uppercase line-clamp-2">
+                            {selectedCred.name}
+                          </p>
+                          <p className="font-mono text-[8px] text-neutral-600 uppercase tracking-widest">
+                            {selectedCred.issuer}
+                          </p>
+                        </div>
+                        <div className="pb-1">
+                          <span className="font-mono text-[7px] text-neutral-600 tracking-widest">
+                            VERIFICATION ACTIVE
+                          </span>
+                        </div>
                       </div>
-                      <div className="space-y-3">
-                        <p className="font-display font-bold text-lg text-white uppercase tracking-tight">
-                          {selectedCred.name}
-                        </p>
-                        <p className="font-mono text-xs text-neutral-400 uppercase tracking-widest">
-                          {selectedCred.issuer}
-                        </p>
-                      </div>
-                      <div className="pb-4 font-mono text-[9px] text-neutral-500 tracking-widest uppercase">
-                        Official Verification Certificate
-                      </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
 
-                {/* Right: Technical Audit Specification Column */}
-                <div className="lg:w-2/5 flex flex-col justify-between">
+                {/* Right Side: Compliance details */}
+                <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-between">
                   <div className="space-y-6">
                     <div>
-                      <span className="font-mono text-[9px] tracking-widest text-neutral-500 uppercase block mb-1">
-                        CREDENTIAL AUDIT VERIFICATION
+                      <span className="px-2 py-0.5 font-mono text-[8px] bg-neutral-900 border border-neutral-850 text-neutral-400 uppercase tracking-widest inline-block mb-3">
+                        {selectedCred.type === 'certification' ? 'BOARD CERTIFICATION' : 'EXECUTIVE TRAINING'}
                       </span>
-                      <h3 className="font-display font-bold text-xl md:text-2xl text-white tracking-tight leading-tight">
+                      <h4 className="font-mono text-[9px] tracking-widest text-neutral-500 uppercase">
+                        CREDENTIAL AUDIT VERIFICATION
+                      </h4>
+                      <h3 className="font-display font-bold text-2xl text-white tracking-tight mt-1.5 leading-snug">
                         {selectedCred.name}
                       </h3>
-                      <p className="font-mono text-xs text-neutral-400 uppercase tracking-widest mt-2">
-                        {selectedCred.issuer}
+                      <p className="font-mono text-xs text-neutral-400 uppercase tracking-widest mt-1">
+                        Issued by: {selectedCred.issuer}
                       </p>
                     </div>
 
-                    <div className="p-4 bg-neutral-900/40 border border-neutral-900 space-y-4">
-                      <div className="flex justify-between items-center text-xs">
-                        <span className="font-mono text-neutral-500 uppercase tracking-widest text-[9px]">
-                          Verification Status
-                        </span>
-                        <span className="px-2.5 py-0.5 font-mono text-[9px] bg-emerald-950/80 border border-emerald-900 text-emerald-400 uppercase tracking-widest font-semibold flex items-center space-x-1">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1" />
-                          <span>Verified</span>
+                    {/* Metadata table */}
+                    <div className="grid grid-cols-2 gap-4 py-4 border-t border-b border-neutral-900/60 font-mono text-[10px] text-neutral-400">
+                      <div>
+                        <span className="text-neutral-600 block text-[8px] tracking-wider uppercase">Audit ID</span>
+                        <span className="text-white break-all">{selectedCred.id.toUpperCase()}-NGL-{selectedCred.year || '2026'}</span>
+                      </div>
+                      <div>
+                        <span className="text-neutral-600 block text-[8px] tracking-wider uppercase">Conformance Year</span>
+                        <span className="text-white">{selectedCred.year || '2026'}</span>
+                      </div>
+                      <div>
+                        <span className="text-neutral-600 block text-[8px] tracking-wider uppercase">Vetting Authority</span>
+                        <span className="text-emerald-500 flex items-center">
+                          <ShieldCheck size={11} className="mr-1" />
+                          Secure Ledger
                         </span>
                       </div>
-
-                      <div className="flex justify-between items-center text-xs pt-3 border-t border-neutral-900/85">
-                        <span className="font-mono text-neutral-500 uppercase tracking-widest text-[9px]">
-                          Registration ID
-                        </span>
-                        <span className="font-mono text-white text-[10px] tracking-wider uppercase">
-                          {selectedCred.id.toUpperCase()}-NGL-2026
-                        </span>
-                      </div>
-
-                      <div className="flex justify-between items-center text-xs pt-3 border-t border-neutral-900/85">
-                        <span className="font-mono text-neutral-500 uppercase tracking-widest text-[9px]">
-                          Classification
-                        </span>
-                        <span className="font-mono text-white text-[10px] uppercase tracking-wider">
-                          {selectedCred.type === 'degree' ? 'Academic Degree' : selectedCred.type === 'certification' ? 'Board Certification' : 'Executive Training'}
+                      <div>
+                        <span className="text-neutral-600 block text-[8px] tracking-wider uppercase">Integrity Status</span>
+                        <span className="text-emerald-500 uppercase tracking-widest font-semibold flex items-center">
+                          <FileCheck size={11} className="mr-1" />
+                          PASS (100%)
                         </span>
                       </div>
                     </div>
 
+                    {/* Description */}
                     <div className="space-y-2">
-                      <h4 className="font-mono text-[9px] tracking-widest text-neutral-500 uppercase">
-                        EXECUTIVE RECOGNITION NOTE
-                      </h4>
-                      <p className="font-sans text-neutral-400 text-xs leading-relaxed">
-                        This credential is legally registered under the administrative framework of <strong>{selectedCred.issuer}</strong>. For third-party corporate governance audits, sovereign investment checks, or institutional inquiries, please contact our strategic operations office directly via the dispatch form.
+                      <span className="font-mono text-[8px] text-neutral-600 tracking-widest uppercase block">Credential Scope</span>
+                      <p className="font-sans text-neutral-300 text-xs leading-relaxed">
+                        {selectedCred.description}
                       </p>
                     </div>
                   </div>
 
-                  <div className="pt-8 border-t border-neutral-900 flex flex-col sm:flex-row gap-3">
+                  {/* Footer Action */}
+                  <div className="pt-6 mt-8 border-t border-neutral-900/80 flex items-center justify-between gap-4">
+                    <div className="flex items-center space-x-1.5">
+                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      <span className="font-mono text-[8px] text-neutral-500 uppercase tracking-widest">
+                        Digital Signature Live
+                      </span>
+                    </div>
                     <button
                       onClick={() => setSelectedCred(null)}
-                      className="w-full py-2.5 bg-neutral-900 text-white font-mono text-[11px] tracking-wider uppercase hover:bg-neutral-800 transition-all duration-300 border border-neutral-800"
+                      className="px-4 py-2 bg-white text-black font-mono text-[10px] tracking-widest uppercase hover:bg-neutral-900 hover:text-white transition-all duration-300 border border-white"
                     >
-                      Dismiss Viewer
+                      Close Audit Log
                     </button>
-                    <a
-                      href="#contact"
-                      onClick={() => setSelectedCred(null)}
-                      className="w-full py-2.5 bg-white text-black font-mono text-[11px] tracking-wider uppercase hover:bg-neutral-900 hover:text-white transition-all duration-300 border border-white block text-center"
-                    >
-                      Verify Document
-                    </a>
                   </div>
                 </div>
 
