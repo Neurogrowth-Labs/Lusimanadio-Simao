@@ -25,7 +25,7 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
     { name: 'Focus & History', href: '#history' },
     { name: 'Technologies', href: '#technologies' },
     { name: 'Accreditations', href: '#certifications' },
-    { name: 'Nominations', href: '#nominations' },
+    { name: 'Recognitions', href: '#nominations' },
     { name: 'Speaking', href: '#speaking' },
     { name: 'Publications', href: '#publications' },
     { name: 'Endorsements', href: '#endorsements' },

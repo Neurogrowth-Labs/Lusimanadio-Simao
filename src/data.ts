@@ -6,6 +6,7 @@ export const PERSONAL_INFO = {
   bioBrief: 'A visionary African executive, entrepreneur, and strategist with extensive leadership experience across artificial intelligence, sustainable development, international trade, investment promotion, media, and governance.',
   bioFull: 'Mr. Lusimadio Soki Simao is widely recognized for founding and scaling impact-driven institutions that align innovation, policy, and inclusive economic growth across Africa. As an executive at the intersection of tech, environmental policy, and trade, his career is defined by strategic leadership, AI-driven innovation, and continental trade development to shape future-ready African institutions and globally competitive enterprises.',
   portraitPath: 'https://media.licdn.com/dms/image/v2/D4D03AQF97hhNCtJS0Q/profile-displayphoto-crop_800_800/B4DZoo4HDmKUAI-/0/1761622390771?e=1784160000&v=beta&t=ne2sUlqerAbBrARFVcXjws8263wGRCLIqh6Rl7wbtZo',
+  calendlyUrl: 'https://calendly.com/simao-neurogrowthlabs/30min',
   contacts: [
     { label: 'Primary Email', value: 'simao@thevoiceofwellness.co.za' },
     { label: 'NeuroGrowth Labs', value: 'Simao@neurogrowthlabs.co.za' },
@@ -253,6 +254,32 @@ export const EXPERIENCE: Experience[] = [
       'Convenes thousands of young leaders, policymakers, and civic actors to drive regional integration, youth leadership, and active policy dialogue.',
       'Supports educational access, digital talent empowerment, and proactive United Nations Sustainable Development Goals (SDGs) advocacy.',
       'Coordinates high-level strategic partnerships between continental policy organs, academic institutions, and international stakeholders.'
+    ],
+    category: 'Leadership'
+  },
+  {
+    id: 'asae-awards',
+    role: 'Founder & Chairperson',
+    organization: 'ASAE - Angola Southern Africa Awards Excellence',
+    duration: '2026 - Present',
+    description: 'Directing the premier regional recognition platform designed to honor outstanding merit, corporate leadership, and technological innovation across Angola and Southern Africa.',
+    bulletPoints: [
+      'Pioneered a prestigious bilateral awards ecosystem designed to celebrate excellence in private enterprise, sustainability initiatives, and technology sectors.',
+      'Formulates vetting frameworks to validate outstanding executive and organizational contributions to regional economic growth.',
+      'Bridges elite corporate networks, sovereign policy developers, and rising entrepreneurs across key Southern African corridors.'
+    ],
+    category: 'Leadership'
+  },
+  {
+    id: 'elmwood-fields-alliance',
+    role: 'Southern Africa Representative & Convener',
+    organization: 'Elmwood Fields Leadership Alliance / Angola Southern Africa Pan African Conference',
+    duration: '2025 - Present',
+    description: 'Appointed to represent the leadership alliance in Southern Africa and serve as the convener of the Angola Southern Africa Pan African Conference, in joint strategic partnership with Neurogrowth Labs.',
+    bulletPoints: [
+      'Delivers elite leadership frameworks and policy workshops to C-Suite directors, political actors, and youth cohorts.',
+      'Hosts and curates the annual Angola Southern Africa Pan African Conference to foster regional integration, trade alignment, and leadership reformation.',
+      'Drives active programmatic collaboration between Neurogrowth Labs and Elmwood Fields to build scalable human-capital solutions.'
     ],
     category: 'Leadership'
   }
@@ -550,27 +577,43 @@ export const SERVICES: Service[] = [
 export const NOMINATIONS: Nomination[] = [
   {
     id: 'nom-1',
-    award: 'Outstanding Leadership in Technology Innovation Nominee',
-    category: 'Enterprise Digital Transformation',
-    year: '2025',
-    organization: 'Sovereign Digital Infrastructure Council',
-    description: 'Recognized for pioneering enterprise-grade AI automation engines (Afritranste AI Studio) and low-latency mesh communications protocols across Southern Africa.'
+    award: 'Mentor of the Year 2023',
+    category: 'Mentorship & Volunteerism Excellence',
+    year: '2023',
+    organization: 'Mentorship and Volunteerism Excellence Awards',
+    description: 'Recognized for outstanding mentorship contribution and dedication to shaping high-performance leaders, youth, and professional cohorts.'
   },
   {
     id: 'nom-2',
-    award: 'African Circular Economy Pioneer of the Year Finalist',
-    category: 'Sustainable Development & Climate Action',
-    year: '2025',
-    organization: 'SustainAfrica Coalition & Climate Action Hub',
-    description: 'Honored for building data-driven municipal waste systems and advocating for eco-sustainable building policies through EcoBuild Africa.'
+    award: 'SDGs 8 Excellence Award 2023',
+    category: 'Sustainable Development & Decent Work',
+    year: '2023',
+    organization: 'Mentorship and Volunteerism Excellence Awards',
+    description: 'Awarded for exceptional alignment of projects and youth upskilling programs to support decent economic growth, vocational training, and inclusive employment.'
   },
   {
     id: 'nom-3',
-    award: 'Outstanding Advocate for Continental Trade Policy Nominee',
-    category: 'Intra-African Trade & Integration Advocacy',
-    year: '2024',
-    organization: 'African Trade Forum / AfCFTA Youth Chamber',
-    description: 'Nominated for providing continuous thought-leadership, policy analysis, and digital tools promoting trade seamlessness under the AfCFTA.'
+    award: 'Excellence in Mentoring Award 2023',
+    category: 'Youth & Enterprise Guidance',
+    year: '2023',
+    organization: 'Mentorship and Volunteerism Excellence Awards',
+    description: 'Honored for continuous support and impact-focused coaching in guiding early-stage startups and corporate executives across SADC corridors.'
+  },
+  {
+    id: 'nom-4',
+    award: 'Outstanding Volunteer Award 2023',
+    category: 'Community Impact & Service',
+    year: '2023',
+    organization: 'Mentorship and Volunteerism Excellence Awards',
+    description: 'Awarded in recognition of selflessness and extensive volunteer leadership in regional development and public-spirited community service programs.'
+  },
+  {
+    id: 'nom-5',
+    award: 'Sustainability Award 2023',
+    category: 'Environmental & Social Governance',
+    year: '2023',
+    organization: 'Mentorship and Volunteerism Excellence Awards',
+    description: 'Recognized for pioneering local and regional sustainable models that promote eco-consciousness and carbon reduction goals.'
   }
 ];
 

@@ -17,11 +17,11 @@ export default function Nominations() {
               HISTORIC INDUSTRY APPRECIATION
             </span>
             <h2 className="font-display font-bold text-3xl md:text-5xl text-white tracking-tight">
-              PREVIOUS NOMINATIONS
+              CONTINENTAL RECOGNITIONS
             </h2>
           </div>
           <p className="font-sans text-neutral-400 text-sm max-w-md mt-4 md:mt-0 leading-relaxed">
-            Record of industry award shortlists, public sector honors, and organization-nominated appreciation in regional and global forums.
+            Record of industry awards, public sector honors, and organization-nominated appreciation in regional and global forums.
           </p>
         </div>
 

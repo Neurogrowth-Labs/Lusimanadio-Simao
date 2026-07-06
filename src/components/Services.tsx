@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Cpu, Globe, Navigation, Users, Smartphone, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { SERVICES } from '../data';
+import { SERVICES, PERSONAL_INFO } from '../data';
 import { Service } from '../types';
 
 const iconMap: Record<string, React.ComponentType<any>> = {
@@ -125,7 +125,9 @@ export default function Services() {
                         Request Advisory Engagement
                       </span>
                       <a
-                        href="#contact"
+                        href={PERSONAL_INFO.calendlyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="p-1.5 bg-neutral-900 group-hover:bg-white text-neutral-400 group-hover:text-black transition-all duration-500 border border-neutral-850 group-hover:border-white"
                         aria-label={`Enquire about ${service.title}`}
                       >

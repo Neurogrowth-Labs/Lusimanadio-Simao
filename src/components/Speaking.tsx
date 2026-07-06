@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Calendar, MapPin, Sparkles, ArrowUpRight, MessageSquareCode } from 'lucide-react';
-import { SPEAKING_ENGAGEMENTS } from '../data';
+import { SPEAKING_ENGAGEMENTS, PERSONAL_INFO } from '../data';
 import { SpeakingEngagement } from '../types';
 
 export default function Speaking() {
@@ -38,7 +38,9 @@ export default function Speaking() {
               Academic contributions, keynotes, and executive panels addressing trade integration, policy automation, and future-forward economic acceleration.
             </p>
             <a
-              href="#contact"
+              href={PERSONAL_INFO.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 font-mono text-[10px] tracking-wider uppercase text-white hover:text-neutral-300 transition-colors"
             >
               <span>Request Keynote Booking</span>
