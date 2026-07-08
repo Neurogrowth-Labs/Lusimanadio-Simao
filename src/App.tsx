@@ -11,7 +11,6 @@ import Services from './components/Services';
 import Gallery from './components/Gallery';
 import Certifications from './components/Certifications';
 import Nominations from './components/Nominations';
-import Speaking from './components/Speaking';
 import Publications from './components/Publications';
 import Endorsements from './components/Endorsements';
 import Contact from './components/Contact';
@@ -58,7 +57,6 @@ export default function App() {
         <Gallery />
         <Certifications />
         <Nominations />
-        <Speaking />
         <Publications />
         <Endorsements />
         <Contact />

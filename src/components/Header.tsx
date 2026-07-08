@@ -26,7 +26,6 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
     { name: 'Technologies', href: '#technologies' },
     { name: 'Accreditations', href: '#certifications' },
     { name: 'Recognitions', href: '#nominations' },
-    { name: 'Speaking', href: '#speaking' },
     { name: 'Publications', href: '#publications' },
     { name: 'Endorsements', href: '#endorsements' },
   ];

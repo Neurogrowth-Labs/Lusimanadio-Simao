@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { BookOpen, FileText, Bookmark, Library, Search, Mic } from 'lucide-react';
+import { BookOpen, FileText, Bookmark, Library, Search, Mic, ExternalLink } from 'lucide-react';
 import { PUBLICATIONS } from '../data';
 
 export default function Publications() {
@@ -113,6 +113,20 @@ export default function Publications() {
                 <p className="font-sans text-neutral-400 text-xs leading-relaxed">
                   {pub.description}
                 </p>
+
+                {pub.link && (
+                  <div className="pt-2">
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-1.5 font-mono text-[10px] tracking-widest uppercase text-white hover:text-neutral-300 border-b border-white hover:border-neutral-300 pb-0.5 transition-all duration-300"
+                    >
+                      <span>Get Book on Amazon</span>
+                      <ExternalLink size={11} />
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

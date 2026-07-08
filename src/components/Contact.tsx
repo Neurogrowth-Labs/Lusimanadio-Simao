@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Phone, MapPin, Send, CheckCircle, ArrowRight, Shield } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, ArrowRight, Shield, ArrowUpRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../data';
 import { ContactMessage } from '../types';
 
@@ -77,7 +77,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-neutral-900">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-neutral-900 gap-6">
           <div>
             <span className="font-mono text-xs tracking-widest text-neutral-500 uppercase block mb-2">
               SECURE CHANNELS
@@ -86,9 +86,20 @@ export default function Contact() {
               SECURE INQUIRY
             </h2>
           </div>
-          <p className="font-sans text-neutral-400 text-sm max-w-md mt-4 md:mt-0 leading-relaxed">
-            Direct coordination lines for corporate governance, AI integrations, regional trade, and sustainability summits.
-          </p>
+          <div className="flex flex-col items-start md:items-end space-y-4 max-w-md w-full">
+            <p className="font-sans text-neutral-400 text-sm leading-relaxed md:text-right w-full">
+              Direct coordination lines for corporate governance, AI integrations, regional trade, and sustainability summits.
+            </p>
+            <a
+              href={PERSONAL_INFO.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 bg-white text-black border border-white hover:bg-transparent hover:text-white px-4 py-2 font-mono text-[10px] tracking-widest uppercase transition-all duration-300 font-semibold"
+            >
+              <span>Request Keynote Booking</span>
+              <ArrowUpRight size={12} />
+            </a>
+          </div>
         </div>
 
         {/* Form & Channels Split */}

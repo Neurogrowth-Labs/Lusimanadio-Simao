@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Cpu, Globe, Navigation, Users, Smartphone, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Cpu, Globe, Navigation, Users, Smartphone, ArrowRight, CheckCircle2, Building } from 'lucide-react';
 import { SERVICES, PERSONAL_INFO } from '../data';
 import { Service } from '../types';
 
@@ -9,7 +9,8 @@ const iconMap: Record<string, React.ComponentType<any>> = {
   Globe: Globe,
   Navigation: Navigation,
   Users: Users,
-  Smartphone: Smartphone
+  Smartphone: Smartphone,
+  Building: Building
 };
 
 export default function Services() {

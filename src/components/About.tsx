@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Briefcase, Award, GraduationCap, ArrowRight, ShieldCheck, CheckCircle2, Languages } from 'lucide-react';
-import { EXPERIENCE, CREDENTIALS, PERSONAL_INFO, LANGUAGES } from '../data';
+import { EXPERIENCE, CREDENTIALS, PERSONAL_INFO, LANGUAGES, MEMBERSHIPS } from '../data';
 import { Experience } from '../types';
 
 export default function About() {
@@ -132,6 +132,38 @@ export default function About() {
                     <p className="font-sans text-neutral-400 text-[11px] leading-relaxed">
                       {lang.details}
                     </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Memberships Section */}
+            <div className="space-y-6 pt-6 border-t border-neutral-900/60">
+              <div>
+                <h3 className="font-display font-semibold text-lg text-white tracking-wider flex items-center space-x-2">
+                  <Award size={18} />
+                  <span>MEMBERSHIPS & AFFILIATIONS</span>
+                </h3>
+                <p className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest mt-1">
+                  Professional Bodies & Sovereign Forums
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {MEMBERSHIPS.map((member) => (
+                  <div
+                    key={member.id}
+                    className="p-4 bg-neutral-950 border border-neutral-900 flex items-start space-x-3 hover:border-neutral-700 transition-colors duration-300"
+                  >
+                    <CheckCircle2 size={16} className="text-neutral-400 mt-0.5 shrink-0" />
+                    <div>
+                      <h4 className="font-sans font-medium text-xs text-white leading-snug">
+                        {member.role}
+                      </h4>
+                      <p className="font-mono text-[9px] text-neutral-500 uppercase tracking-wider mt-1">
+                        {member.organization}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>

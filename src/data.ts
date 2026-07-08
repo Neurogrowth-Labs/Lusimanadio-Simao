@@ -1,4 +1,4 @@
-import { Project, Experience, Publication, Credential, Endorsement, Language, SpeakingEngagement, Service, Nomination } from './types';
+import { Project, Experience, Publication, Credential, Endorsement, Language, SpeakingEngagement, Service, Nomination, Membership } from './types';
 
 export const PERSONAL_INFO = {
   name: 'Lusimanadio Soki Simao, MBA',
@@ -292,7 +292,8 @@ export const PUBLICATIONS: Publication[] = [
     publisher: 'African Business Press',
     year: '2025',
     type: 'book',
-    description: 'A comprehensive playbook and practical guide for African startup founders and corporate executives seeking to scale business operations efficiently.'
+    description: 'A comprehensive playbook and practical guide for African startup founders and corporate executives seeking to scale business operations efficiently.',
+    link: 'https://www.amazon.com.br/ENTREPRENEURS-HANDBOOK-Practical-Mastering-Entrepreneur-ebook/dp/B0FXHLX3SG?ref_=ast_author_dp&th=1&psc=1'
   },
   {
     id: 'pub-2',
@@ -300,7 +301,8 @@ export const PUBLICATIONS: Publication[] = [
     publisher: 'Golden Mind Publications',
     year: '2024',
     type: 'book',
-    description: 'A transformative perspective on reforming, redefining, and modernizing leadership styles to align with contemporary continental and organizational goals.'
+    description: 'A transformative perspective on reforming, redefining, and modernizing leadership styles to align with contemporary continental and organizational goals.',
+    link: 'https://www.amazon.com.br/New-Era-Leaders-Transforming-Leadership-ebook/dp/B0FX72XNFH'
   },
   {
     id: 'pub-3',
@@ -316,7 +318,8 @@ export const PUBLICATIONS: Publication[] = [
     publisher: 'The Voice of Wellness Media',
     year: '2023',
     type: 'book',
-    description: 'A deep behavioral and physiological manual outlining neurodiverse growth strategies, mental fitness, and high-performance adaptation.'
+    description: 'A deep behavioral and physiological manual outlining neurodiverse growth strategies, mental fitness, and high-performance adaptation.',
+    link: 'https://www.amazon.com.br/Overcoming-ADHD-Personal-Understanding-Managing-ebook/dp/B0FXHMGCPN?ref_=ast_author_dp&th=1&psc=1'
   },
   {
     id: 'pub-5',
@@ -336,19 +339,19 @@ export const PUBLICATIONS: Publication[] = [
   },
   {
     id: 'pub-7',
-    title: 'Keynote Address: Reforming African Youth Leadership in Policy & Governance',
-    publisher: 'Golden Minds Africa Roundtable (Kinshasa)',
-    year: '2025',
+    title: 'Masterclass: Competing in the Global Market - Actionable Strategies for Seamless Continental and Global Market Expansion',
+    publisher: 'EduLight International',
+    year: '2026',
     type: 'engagement',
-    description: 'Led a plenary address on the role of youth advisory frameworks in building resilient, transparent public institutions.'
+    description: 'A masterclass delivering operational blueprints, tariff navigation models, and market entry tactics for scaling African ventures globally.'
   },
   {
     id: 'pub-8',
-    title: 'Panel Panelist: Digitization & Regional Integration under the AfCFTA',
+    title: 'Workshop: The New Era of Leaders - Redefining Leadership for Modern Time Leaders',
     publisher: 'Africa Youth Future Forward Summit',
-    year: '2024',
+    year: '2025',
     type: 'engagement',
-    description: 'Debated strategies to streamline digital currency corridors and remove persistent non-tariff trade bottlenecks.'
+    description: 'Facilitated a leadership masterclass on modernizing executive values, digital-era adaptability, and team enablement frameworks.'
   },
   {
     id: 'pub-9',
@@ -598,6 +601,14 @@ export const SERVICES: Service[] = [
     sectors: ['Informal Commerce', 'Fintech', 'Sovereign Economic Inclusivity'],
     description: 'Providing voice-activated financial ledger structures (IBOS) and micro-finance readiness training to help female market traders and youth merchants digitize their operations and secure capital.',
     iconName: 'Smartphone'
+  },
+  {
+    id: 'srv-6',
+    title: 'Green Building Consulting - EDGE',
+    targetAudience: 'Sovereign & Govt',
+    sectors: ['Climate & Sustainability', 'Green Building Standards', 'Resource Efficiency', 'Carbon-Reduction Modeling'],
+    description: 'Providing technical expertise, carbon-reduction modeling, and compliance audits aligned with IFC EDGE standards to certify climate-responsive, resource-efficient properties.',
+    iconName: 'Building'
   }
 ];
 
@@ -659,5 +670,24 @@ export const NOMINATIONS: Nomination[] = [
     description: 'Appointed as the national representative to promote Angolan culture, leadership excellence, and social development initiatives on the global stage.'
   }
 ];
+
+export const MEMBERSHIPS: Membership[] = [
+  {
+    id: 'mb-1',
+    role: 'Permanent Advisory Seat Holder',
+    organization: 'African Union ECOSOCC under the Africa Youth Forum International'
+  },
+  {
+    id: 'mb-2',
+    role: 'Associate Member',
+    organization: 'Charter Managers Canada - CIM'
+  },
+  {
+    id: 'mb-3',
+    role: 'Member',
+    organization: 'South Africa AI Association'
+  }
+];
+
 
 

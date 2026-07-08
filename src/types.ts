@@ -31,6 +31,7 @@ export interface Publication {
   year: string;
   type: 'book' | 'academic' | 'national' | 'engagement';
   description: string;
+  link?: string;
 }
 
 export interface Credential {
@@ -95,5 +96,11 @@ export interface Nomination {
   year: string;
   organization: string;
   description: string;
+}
+
+export interface Membership {
+  id: string;
+  role: string;
+  organization: string;
 }
 
