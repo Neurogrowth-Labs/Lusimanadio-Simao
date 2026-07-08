@@ -443,12 +443,20 @@ export const CREDENTIALS: Credential[] = [
     year: '2024'
   },
   {
-    id: 'cred-10',
-    name: 'Certified Oil and Gas Safety Management',
-    issuer: 'OSHAcademy Occupational Safety & Health Training',
+    id: 'cred-11',
+    name: 'Certified John Maxwell Leadership Team Member',
+    issuer: 'John Maxwell Leadership Academy',
     type: 'certification',
-    description: 'Professional training validating competence in industrial safety management, environmental hazard mitigation, occupational health regulations, and energy-sector safety auditing.',
-    year: '2023'
+    description: 'This professional credential validates successful completion of the leadership licensing program. It certifies expertise in team leadership, executive coaching frameworks, and interpersonal development systems.',
+    year: '2025'
+  },
+  {
+    id: 'cred-12',
+    name: 'Accredited TESOL/TEFL Teacher',
+    issuer: 'World TESOL Academy',
+    type: 'certification',
+    description: 'An internationally accredited teaching credential validating proficiency in English language pedagogy, foreign language learning theories, lesson development, and classroom management strategies.',
+    year: '2025'
   }
 ];
 
