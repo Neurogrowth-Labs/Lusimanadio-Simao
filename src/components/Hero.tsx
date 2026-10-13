@@ -21,7 +21,7 @@ export default function Hero({ onOpenQr }: HeroProps) {
       className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-neutral-950"
     >
       {/* Background Decorative Grid - Low Contrast */}
-      <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#4f4f4f10_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f10_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#4f4f4f10_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f10_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-im[...]" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
         
@@ -81,7 +81,7 @@ export default function Hero({ onOpenQr }: HeroProps) {
             </a>
             <button
               onClick={onOpenQr}
-              className="px-6 py-3.5 bg-transparent text-neutral-400 font-mono text-xs tracking-wider uppercase border border-neutral-800 hover:text-white hover:border-white transition-all duration-300 flex items-center space-x-2"
+              className="px-6 py-3.5 bg-transparent text-neutral-400 font-mono text-xs tracking-wider uppercase border border-neutral-800 hover:text-white hover:border-white transition-all duratio[...]"
             >
               <QrCode size={13} />
               <span>Digital Card</span>
@@ -129,13 +129,13 @@ export default function Hero({ onOpenQr }: HeroProps) {
               <img
                 src={PERSONAL_INFO.portraitPath}
                 alt="Mr. Lusimanadio Soki Simao, MBA"
-                className="w-full h-full object-cover grayscale brightness-95 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 ease-out"
+                className="portrait-img"
                 referrerPolicy="no-referrer"
               />
             </div>
 
             {/* Overlap Info Badge (Hover reveal) */}
-            <div className="absolute bottom-4 left-4 right-4 bg-neutral-950/90 border border-neutral-900 p-4 backdrop-blur-sm transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400 ease-out">
+            <div className="absolute bottom-4 left-4 right-4 bg-neutral-950/90 border border-neutral-900 p-4 backdrop-blur-sm transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hov[...]">
               <div className="flex items-center justify-between">
                 <div>
                   <h4 className="font-display font-bold text-sm text-white uppercase tracking-wider">
