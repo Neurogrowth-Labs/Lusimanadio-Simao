@@ -1,5 +1,7 @@
 import { Project, Experience, Publication, Credential, Endorsement, Language, SpeakingEngagement, Service, Nomination, Membership } from './types';
-import heroPortrait from './assets/images/1788325335058.jpg';
+
+// Use Vite-compatible URL import so the value is a runtime string URL that the <img> tag can consume.
+const heroPortrait = new URL('./assets/images/1788325335058.jpg', import.meta.url).href;
 
 export const PERSONAL_INFO = {
   name: 'Lusimanadio Soki Simao, MBA',
